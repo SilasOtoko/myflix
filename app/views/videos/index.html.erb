@@ -1,0 +1,6 @@
+<% @videos.each do |video| %>
+	<%= link_to video_path(video) do %>
+		<img src="<%= video.small_cover %>" class="small-cover"/>
+		<h1><%= video.title %></h1>
+	<% end %>
+<% end %>
