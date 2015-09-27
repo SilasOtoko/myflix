@@ -46,11 +46,19 @@ Video.create(title: "Wolf's Rain", description: "Wolves",
   large_cover: "http://www.wolfs-rain.org/downloads/images/Group.jpg",
   category_id: 1)
   
-Video.create(title: "Totoro", description: "Wonderful story by Miyazaki",
-  small_cover: "http://p1.pichost.me/i/34/1570420.jpg",
-  large_cover: "http://p1.pichost.me/i/34/1570420.jpg",
-  category_id: 1)
+totoro = Video.create(title: "Totoro", description: "Wonderful story by Miyazaki",
+                      small_cover: "http://p1.pichost.me/i/34/1570420.jpg",
+                      large_cover: "http://p1.pichost.me/i/34/1570420.jpg",
+                      category_id: 1)
 
 Category.create(category_name: "Anime")
 Category.create(category_name: "Foreign Film")
 Category.create(category_name: "Comedy")
+
+josiah = User.create(username: "Josiah Schaefer", 
+                     password: "password",
+                     email: "josiah@example.com")
+                     
+Review.create(user: josiah, video: totoro, rating: 5, content: "This is a really good movie!")
+Review.create(user: josiah, video: totoro, rating: 2, content: "It's alright.")
+

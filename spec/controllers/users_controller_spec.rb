@@ -29,7 +29,7 @@ describe UsersController do
     context "with invalid input" do
       before do 
         post :create, user: { email: "",
-                              password_digest: "password",
+                              password: "password",
                               username: "Josiah" }
       end
       

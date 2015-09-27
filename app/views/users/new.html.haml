@@ -6,7 +6,8 @@
           %h1 Register
         %fieldset
           = f.email_field :email, label: "Email Address", placeholder: "example@email.com"
-          = f.password_field :password_digest, placeholder: "Password123"
+          = f.password_field :password, label: "Password", placeholder: "Password123"
+          = f.password_field :password_confirmation, label: "Confirm Password", placeholder: "Password123"
           = f.text_field :username, label: "Username", placeholder: "NickyNick"
         %fieldset.actions.control-group
           .controls

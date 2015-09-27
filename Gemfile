@@ -11,7 +11,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'pg'
 gem 'formtastic', '~> 3.0'
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 
 group :development do
   gem 'thin'
