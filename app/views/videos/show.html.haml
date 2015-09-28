@@ -2,11 +2,13 @@
   .container
     .row
       .video_large_cover.col-md-7.col-md-offset-1
-        %img(src="#{@video.large_cover}")
+        %img(class="large-cover" src="#{@video.large_cover}")
       .video_info.col-md-3
         %header
           %h3= @video.title
         %p= @video.description
+        .actions
+          = link_to "+ My Queue", queue_items_path(video_id: @video.id), method: :post, class: 'btn'
 
 %section.reviews.container
   .row

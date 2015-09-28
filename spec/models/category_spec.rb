@@ -8,6 +8,7 @@ DatabaseCleaner.clean
 
 describe Category do
   it { should have_many(:videos)}
+  it { should validate_presence_of(:category_name) }
   
   describe "#recent_videos" do
     it "returns the videos in the reverse chronological order by created at" do
