@@ -13,8 +13,8 @@ describe Video do
   it { should have_many(:reviews).order("created_at DESC") }
   
   describe "search_by_title" do
-    let!(:futurama) { Fabricate.build(:video) }
-    let!(:back_to_future) {  Video.create(title: "Back to Future", description: "Time Travel", category_id: 2) }
+    let!(:futurama) { Fabricate(:video, title: "Futurama", category_id: 2) }
+    let!(:back_to_future) { Fabricate(:video, title: "Back to Future", category_id: 2) }
     
     it "no match" do
       expect(Video.search_by_title("hello")).to eq([])
