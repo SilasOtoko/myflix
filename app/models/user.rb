@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :queue_items
+  has_many :queue_items, -> { order(:position) }
   
   has_secure_password
   
