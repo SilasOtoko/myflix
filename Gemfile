@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'formtastic', '~> 3.0'
 gem 'bcrypt'
+gem 'awesome_print'
 
 group :development do
   gem 'thin'
@@ -30,6 +31,8 @@ group :test do
   gem 'database_cleaner', '1.2.0'
   gem 'shoulda-matchers'
   gem 'fabrication', '2.14.1'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :production do
